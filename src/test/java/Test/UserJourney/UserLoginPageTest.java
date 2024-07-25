@@ -4,8 +4,6 @@ import Util.TestBase;
 import org.testng.annotations.Test;
 import page.UserJourney.UserLoginPage;
 
-import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
-
 public class UserLoginPageTest extends TestBase {
 
 
