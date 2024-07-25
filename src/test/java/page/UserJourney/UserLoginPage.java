@@ -1,12 +1,13 @@
 package page.UserJourney;
 
+import Util.TestBase;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class UserLoginPage {
-    private Page page = null;
+    private Page page;
     public UserLoginPage(Page page){
         this.page = page;
     }
@@ -26,6 +27,14 @@ public class UserLoginPage {
     public  void clickLoginFormLoginButton(){
         Locator btnLoginFormLogin = page.locator("//div[@class='login__form elevation-2']/button");
         btnLoginFormLogin.click();
+    }
+    public Page loginToPetShop(){
+        TestBase testBase = new TestBase();
+        clickLoginLgoutButton();
+        fillLoginFormEmailField(testBase.userEmail);
+        fillLoginFormPasswordField(testBase.userPassword);
+        clickLoginFormLoginButton();
+        return page;
     }
 
 
