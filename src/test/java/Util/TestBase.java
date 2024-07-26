@@ -7,7 +7,7 @@ import org.testng.annotations.*;
 public class TestBase {
 
   public String userEmail = "usamaismail249@gmail.com";
-  public String userPassword = "Asdf@1234";
+  public String userPassword = "userpassword";
   public String adminEmail = "admin@buckhill.co.uk";
   public String adminPassword = "admin";
   public Playwright playWrite;
